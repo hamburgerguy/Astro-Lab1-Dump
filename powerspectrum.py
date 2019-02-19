@@ -1,13 +1,13 @@
-def powerspec(data):
+def powerspec(data, divisor, N):
         """
         Take the power spectrum of a signal array
         """
         import numpy as np
         import ugradio
         
-        Vsamp = 62.5/8 
+        Vsamp = 62.5/divisor 
     
-        N = 512
+        #N = 512 N is samples
 
         time = np.linspace(-N/(2*Vsamp),(N/2-1)/Vsamp,N)
         #Fourier voltage spectrum - have real and imaginary parts
